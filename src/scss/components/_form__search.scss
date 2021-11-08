@@ -1,0 +1,80 @@
+.search {
+  background-color: $card-bg--light;
+  border-radius: 15px;
+  height: 69px;
+  @include media("<tablet") {
+    width: 327px;
+    height: 60px;
+  }
+  color: $links-and-date--light;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+
+  input {
+    font-family: "space mono";
+    font-weight: regular;
+    color: inherit;
+    caret-color: $blue-accent;
+    width: 100%;
+
+    font-size: 18px;
+    @include media("<tablet") {
+      font-size: 13px;
+    }
+    font-weight: regular;
+    border: none;
+    outline: 0;
+  }
+  button {
+    cursor: pointer;
+    font-family: "space mono";
+    font-weight: bold;
+    font-size: 16px;
+    background-color: $blue-accent;
+    color: $card-bg--light;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: none;
+    width: 106px;
+    height: 50px;
+    margin-right: 10px;
+    @include media("<tablet") {
+      width: 84px;
+      height: 46px;
+      font-size: 14px;
+      line-height: 21px;
+    }
+    transition: background-color 0.15s ease-in-out;
+    &:hover {
+      background-color: #60abff;
+    }
+  }
+}
+.search.dark {
+  background-color: $card-bg--dark;
+  color: $title-and-hover--dark;
+  input {
+    background-color: $card-bg--dark;
+  }
+}
+.search__icon {
+  margin-left: 32px;
+  margin-right: 1.5rem;
+  @include media("<tablet") {
+    margin-left: 16px;
+    margin-right: 0.5rem;
+    letter-spacing: 1px;
+  }
+}
+.search__error {
+  white-space: nowrap;
+  font-size: 15px;
+  font-weight: bold;
+  margin-right: 1.5rem;
+  color: #f74646;
+  transition: opacity 0.15s ease-in-out;
+}

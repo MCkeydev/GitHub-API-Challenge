@@ -1,0 +1,11 @@
+.main__component {
+  width: 730px;
+  display: flex;
+  flex-flow: column;
+  @include media("<desktop") {
+    width: 573px;
+  }
+  @include media("<tablet") {
+    width: 327px;
+  }
+}
